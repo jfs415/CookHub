@@ -1,0 +1,22 @@
+spring:
+  liquibase:
+    enabled: false
+  application:
+    name: CookHub
+  data:
+    mongodb:
+      user: ${CH_USER:username}
+      password: ${CH_PASSWORD:password}
+      uri: mongodb://${CH_HOST:localhost}:27017/${CH_DB_NAME:CookHub}
+
+server:
+  shutdown: graceful
+
+logging:
+  level:
+    com: info
+    org:
+      springframework: info
+
+application:
+  version: 1.0.0
