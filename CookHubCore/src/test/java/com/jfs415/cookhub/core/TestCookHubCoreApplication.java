@@ -10,14 +10,15 @@ import org.testcontainers.utility.DockerImageName;
 @TestConfiguration(proxyBeanMethods = false)
 public class TestCookHubCoreApplication {
 
-	@Bean
-	@ServiceConnection(name = "redis")
-	GenericContainer<?> redisContainer() {
-		return new GenericContainer<>(DockerImageName.parse("redis:latest")).withExposedPorts(6379);
-	}
+    @Bean
+    @ServiceConnection(name = "redis")
+    GenericContainer<?> redisContainer() {
+        return new GenericContainer<>(DockerImageName.parse("redis:latest")).withExposedPorts(6379);
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.from(CookHubCoreApplication::main).with(TestCookHubCoreApplication.class).run(args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.from(CookHubCoreApplication::main)
+                .with(TestCookHubCoreApplication.class)
+                .run(args);
+    }
 }

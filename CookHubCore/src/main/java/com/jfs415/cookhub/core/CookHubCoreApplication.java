@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CookHubCoreApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CookHubCoreApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(CookHubCoreApplication.class, args);
+    }
 }
