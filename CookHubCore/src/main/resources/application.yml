@@ -7,7 +7,7 @@ spring:
     mongodb:
       user: ${CH_USER:username}
       password: ${CH_PASSWORD:password}
-      uri: mongodb://${CH_HOST:localhost}:27017/${CH_DB_NAME:CookHub}
+      uri: mongodb://${CH_HOST:cookhub-db}:27017/${CH_DB_NAME:CookHub}
 
 server:
   shutdown: graceful
