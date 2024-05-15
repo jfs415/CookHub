@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  db:
+    image: mongodb/mongodb-community-server:latest
+    restart: always
+    env_file:
+      - .env
+    container_name: 'cookhub-db'
+    ports:
+      - '27017:27017'
+    expose:
+      - '27017'
+    volumes:
+      - db:/var/lib/mongodb
+  core:
+    build:
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    container_name: "cookhub-core"
+    ports:
+      - '8080:8080'
+    volumes:
+      - /build/libs/:/app
+volumes:
+  db:
