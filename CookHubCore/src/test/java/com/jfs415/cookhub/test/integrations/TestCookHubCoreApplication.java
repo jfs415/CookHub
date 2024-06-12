@@ -1,5 +1,6 @@
-package com.jfs415.cookhub.core;
+package com.jfs415.cookhub.test.integrations;
 
+import com.jfs415.cookhub.core.CookHubCoreApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
