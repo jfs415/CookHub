@@ -56,3 +56,9 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+test {
+	systemProperty "CH_USER", System.getenv("CH_USER")
+	systemProperty "CH_PASSWORD", System.getenv("CH_PASSWORD")
+	systemProperty "CH_HOST", System.getenv("CH_HOST")
+}
